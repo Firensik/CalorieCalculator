@@ -11,7 +11,10 @@ function App() {
   const [activity, setActivity] = useState();
   const [bodyFat, setBodyFat] = useState(20);
   const [calories, setCalories] = useState("");
-
+  console.log(age);
+  console.log(gender);
+  console.log(height);
+  console.log(weight);
   const changeGender = (e) => {
     setGender(e.target.value);
   };
@@ -38,7 +41,7 @@ function App() {
     } else if (bmi === "2") {
       Katch(bodyFat, weight);
     }
-    let ret = parseFloat((BMR * activity).toFixed(12));
+    let ret = parseFloat((BMR * activity).toFixed());
     setCalories(ret);
   };
 
